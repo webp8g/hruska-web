@@ -1,0 +1,44 @@
+.sub-section {
+  overflow-x: hidden;
+}
+
+
+main {
+  display: block;
+}
+
+main h1 {
+  text-align: center;
+  font-family: "hruska", "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 80px;
+  color: #9dff00;
+  width: 50%;
+  margin: 0 auto;
+  padding: 4% 0;
+}
+
+main p {
+  padding: 0 10% 5%;
+  color: #dbdbdb;
+  font-weight: bold;
+  width: 100%;
+}
+main .ns {
+  margin-bottom: 100px;
+}
+main img {
+  margin-bottom: 0;
+  position: relative;
+  top: 0.7vh;
+}
+
+@media (max-width: 880px) {
+  main h1 {
+    margin-top: 80px;
+    width: 80%;
+  }
+  .ns {
+    padding: 10%;
+  }
+}

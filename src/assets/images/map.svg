@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="90.3246"
+   height="122.99985"
+   viewBox="0 0 23.898383 32.543708"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     style="display:none"
+     transform="translate(-55.907015,-36.384352)">
+    <path
+       style="display:inline;fill:none;stroke:#00ff33;stroke-width:1.127;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 66.401235,10.457991 H 18.979222 m -1.857717,110.638999 49.407493,0.467"
+       id="rect1-7-8-6-2-4-1" />
+    <path
+       style="fill:none;fill-opacity:0.491898;stroke:#00ff33;stroke-width:1.08471;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 77.893925,22.409218 0.09281,87.251522"
+       id="path2-8" />
+  </g>
+  <g
+     id="layer2"
+     transform="translate(-55.907015,-36.384352)">
+    <path
+       id="path15-1-7-4-1-8-7-9-7-4"
+       style="display:inline;fill:none;fill-opacity:1;stroke:#00eeff;stroke-width:1.05446;stroke-dasharray:none;stroke-opacity:1"
+       d="M 77.11574,42.094274 C 76.824954,40.537746 76.760911,38.94647 76.926039,37.37969 v 0 c -0.346101,0.207454 -0.696254,0.408963 -1.050223,0.604402 -1.766414,0.975323 -3.629334,1.799535 -5.566828,2.430636 -1.580156,0.514703 -3.207649,0.900594 -4.773844,1.450878 -1.566222,0.550278 -3.090844,1.28049 -4.44729,2.604516 -3.287584,2.606802 -4.96495,6.429251 -4.606057,10.341897 v 0 c 0.576196,6.281684 6.135611,10.906894 12.417288,10.330698 C 75.180762,64.566522 79.805979,59.007112 79.229783,52.725429 79.101279,51.324482 78.742798,50.25339 78.232857,48.350262 77.592865,45.96178 77.483424,44.062369 77.11574,42.094274 Z" />
+    <g
+       id="g5-1-6-1-2-4-8"
+       transform="matrix(-0.26361496,0,0,0.26361496,647.08735,-6.6712526)"
+       style="display:inline;fill:#00eeff;fill-opacity:1;stroke:#00eeff;stroke-opacity:1">
+      <g
+         id="g6-4-8-8-7-3"
+         transform="matrix(0.56262145,0,0,-0.56262145,1015.0615,480.86855)"
+         style="display:inline;fill:#00eeff;fill-opacity:1;stroke:#00eeff;stroke-width:3.96855;stroke-dasharray:none;stroke-opacity:1">
+        <circle
+           style="display:inline;fill:#00eeff;fill-opacity:1;stroke:#00eeff;stroke-width:3.96855;stroke-dasharray:none;stroke-opacity:1"
+           id="path16-1-4-6-2-0-8-1"
+           cx="-2112.9146"
+           cy="-373.625"
+           transform="scale(-1)"
+           r="26.66765" />
+      </g>
+    </g>
+  </g>
+</svg>

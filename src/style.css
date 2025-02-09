@@ -1,0 +1,95 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  scroll-behavior: smooth;
+
+  --main-bg-color: #f0f0f0;
+  --text-color: #333;
+}
+
+@font-face {
+  font-family: "hruska";
+  src: url("./assets/fonts/font-hruska.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #001f24;
+  color: rgb(214, 214, 214);
+  overflow-x: hidden;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+#con {
+  width: 80%;
+  margin: 50px auto 0px;
+}
+
+main h3 {
+  font-weight: normal;
+  opacity: 0;
+  animation: text 1.6s ease-out forwards 3s;
+  color: #9dff00;
+}
+
+main h1 {
+  color: #1dd755;
+  opacity: 0;
+  animation: text 1.3s ease-in-out forwards 0.8s;
+}
+
+main p {
+  margin: 50px 0 0;
+  width: 320px;
+  font-size: 1rem;
+  color: #148569;
+  transform: scale(0);
+  animation: sct 1.6s ease-in-out forwards 1.1s;
+}
+
+@keyframes sct {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(0.05);
+    opacity: 0.05;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes text{
+  from{opacity: 0;transform: translateX(-100%);}
+  to{opacity: 1; transform: translateX(0);}
+}
+
+
+
+@media (max-width: 880px) {
+  main h1 {
+    font-size: 7vw;
+  }
+  main h3 {
+    font-size: 4vw;
+  }
+}
