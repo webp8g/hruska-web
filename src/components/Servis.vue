@@ -11553,6 +11553,7 @@ main p {
 .mp {
   font-weight: normal;
   color: #148569;
+  text-align: center;
 }
 
 @media (max-width: 880px) {

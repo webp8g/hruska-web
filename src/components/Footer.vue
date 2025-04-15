@@ -1,6 +1,7 @@
 <template>
   <footer>
-    <Faqs :isVisible="isFullScreen" @close="closeFullScreen" />
+    <Faqs :isVisible="isFullScreenFaqs" @close="closeFullScreen" />
+    <Docs :isVisible="isFullScreenDocs" @close="closeFullScreen" />
 
     <div class="f-col">
       <svg
@@ -16,7 +17,7 @@
       </svg>
       <h3>HRUŠKA</h3>
       <ul>
-        <li><button @click="openFullScreen">Často kladené otázky</button></li>
+        <li><button @click="openFullScreenFaqs">Často kladené otázky</button></li>
         <li v-for="(pdf, index) in pdfList1" :key="index">
           <a :href="pdf.url" target="_blank">{{ pdf.name }}</a>
         </li>
@@ -29,6 +30,7 @@
         <li v-for="(pdf, index) in pdfList2" :key="index">
           <a :href="pdf.url" target="_blank">{{ pdf.name }}</a>
         </li>
+        <li><button @click="openFullScreenDocs">Ostatné dokumenty</button></li>
       </ul>
     </div>
 
@@ -61,15 +63,18 @@
 
 <script>
 import Faqs from "./Faqs.vue";
+import Docs from "./Docs.vue";
 
 export default {
   name: "Footer",
   components: {
     Faqs,
+    Docs
   },
   data() {
     return {
-      isFullScreen: false,
+      isFullScreenFaqs: false,
+      isFullScreenDocs: false,
       pdfList1: [
         {
           name: "Všeobecné podmienky",
@@ -106,12 +111,17 @@ export default {
     };
   },
   methods: {
-    openFullScreen() {
-      this.isFullScreen = true;
+    openFullScreenFaqs() {
+      this.isFullScreenFaqs = true;
+      document.body.classList.add("no-scroll");
+    },
+    openFullScreenDocs() {
+      this.isFullScreenDocs = true;
       document.body.classList.add("no-scroll");
     },
     closeFullScreen() {
-      this.isFullScreen = false; // Hide the full-screen component
+      this.isFullScreenFaqs = false; 
+      this.isFullScreenDocs = false; 
       document.body.classList.remove("no-scroll");
     },
 

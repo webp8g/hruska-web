@@ -98,7 +98,12 @@ export default {
 };
 
 function smoothScroll(target, duration) {
-  const targetPosition = target.getBoundingClientRect().top - 20 + window.scrollY;
+  let offset = -20;
+  if (target.id === "domov") {
+    offset = -window.scrollY;
+  }
+  console.log(offset);
+  const targetPosition = target.getBoundingClientRect().top + offset + window.scrollY;
   const startPosition = window.scrollY;
   const distance = targetPosition - startPosition;
   let startTime = null;
@@ -159,7 +164,7 @@ nav {
   margin: 0;
 }
 
-.nav-toggle {   
+.nav-toggle {
   display: block;
   margin: 0 auto;
   padding: 10px 20px 5px;

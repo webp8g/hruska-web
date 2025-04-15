@@ -37,6 +37,9 @@
       </div>
     </main>
 
+    <img class="space" src="../assets/images/space.png" />
+    <img class="telescope" src="../assets/images/radio_telescope.png" />
+
     <div class="pI">
       <button @click="openComponent">Partnerský Internet a Televízia</button>
       <button @click="closeComponent" v-show="isClicked === true" class="close-c">
@@ -90,6 +93,16 @@ export default {
 
 .close-c:hover {
   background: #006e30 !important;
+}
+
+.space {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.telescope {
+  margin: -25vw 15vw -100px;
+  width: 50vw;
 }
 
 @media (max-width: 880px) {

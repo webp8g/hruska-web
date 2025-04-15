@@ -168,6 +168,17 @@
         </div>
       </div>
 
+      <div class="con-ponuka">
+        <div class="img-con">
+          <img :src="images[currentIndex].src" :alt="images[currentIndex].alt" />
+          <div class="caption">{{ images[currentIndex].alt }}</div>
+        </div>
+        <div class="controls">
+          <div class="arrow left" @click="prevImage">&#9664;</div>
+          <div class="arrow right" @click="nextImage">&#9654;</div>
+        </div>
+      </div>
+
       <p>
         Ponúkame kompletné vybudovanie počítačových sietí a neobmedzené vysokorýchlostné
         pripojenie do siete internet pre všetkých. Aplikujeme technológie, ktoré prinášajú
@@ -180,7 +191,6 @@
 </template>
 
 <script>
-
 export default {
   name: "Domov",
   data() {
@@ -194,6 +204,26 @@ export default {
         path4: "none",
         path5: "none",
       },
+
+      currentIndex: 1,
+      images: [
+        {
+          src: new URL("../assets/images/hruska3.png", import.meta.url).href,
+          alt: "montáž a zariadenie zadarmo",
+        },
+        {
+          src: new URL("../assets/images/hruska1.png", import.meta.url).href,
+          alt: "pripojenie do 24hodín",
+        },
+        {
+          src: new URL("../assets/images/hruska4.png", import.meta.url).href,
+          alt: "služby bez viazanosti",
+        },
+        {
+          src: new URL("../assets/images/hruska2.png", import.meta.url).href,
+          alt: "bezplatný servis do 24 hodín od nahlásenia poruchy",
+        },
+      ],
     };
   },
   computed: {
@@ -246,6 +276,17 @@ export default {
       } else {
         this.rotationText = "bezplatný servis do 24 hodín od nahlásenia poruchy";
       }
+    },
+
+    nextImage() {
+      this.currentIndex = (this.currentIndex + 1) % this.images.length;
+    },
+    prevImage() {
+      this.currentIndex =
+        (this.currentIndex - 1 + this.images.length) % this.images.length;
+    },
+    goToImage(index) {
+      this.currentIndex = index;
     },
   },
 };
@@ -304,15 +345,16 @@ main #bt {
 
 .info p {
   color: #148569;
+  text-align: center;
 }
 
 .h-i {
-  margin: 50px 0;
   color: #2cbdbd;
 }
 
 .h-i h2 {
-  margin-bottom: 20px;
+  position: relative;
+  top: 13vh;
 }
 
 .img-h {
@@ -341,6 +383,68 @@ main #bt {
   top: 13vw;
 }
 
+.con-ponuka {
+  position: relative;
+  left: 20%;
+  margin-top: 100px;
+  margin-bottom: 60px;
+}
+
+.img-con {
+  width: 39vw;
+  overflow: hidden;
+  position: relative;
+  background: #011615;
+  border-radius: 15px;
+}
+
+.img-con img {
+  width: 100%;
+  display: block;
+}
+
+.controls {
+  position: absolute;
+  top: 50%;
+  left: -5.5vw;
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  transform: translateY(-50%);
+}
+
+.arrow {
+  border: 4px #00ff4c solid;
+  color: #00ff4c;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: #00100c;
+  transition: background-color 0.3s;
+}
+
+.arrow:hover {
+  background-color: #02331e;
+}
+
+.caption {
+  position: absolute;
+  bottom: 10px;
+  left: 25%;
+  width: 50%;
+  text-align: center;
+  color: #00ff4c;
+  background: #01221c;
+  padding: 5px 20px;
+  border-radius: 50px;
+}
+
 @keyframes rotate {
   0% {
     transform: rotate(20deg);
@@ -360,11 +464,18 @@ main #bt {
 
 #info-text {
   position: absolute;
-  margin-top: 6vw;
+  text-align: left;
+  margin-top: 13vw;
   font-size: 20px;
   width: 300px;
   color: #9dff00;
   text-transform: uppercase;
+}
+
+@media (max-width: 1180px) {
+  .dh {
+    top: 4vw;
+  }
 }
 
 @media (max-width: 880px) {
@@ -372,6 +483,23 @@ main #bt {
     margin-top: 100px;
     position: relative;
     left: 50px;
+  }
+
+  .con-ponuka {
+    left: -5%;
+  }
+
+  .img-con {
+    width: 70vw;
+  }
+
+  .controls {
+    left: -5.5vw;
+    width: 80vw;
+  }
+
+  .h-i h2 {
+    position: initial;
   }
 
   .m-text {
@@ -417,6 +545,7 @@ main #bt {
 
   #info-text {
     font-size: 4vw;
+    margin-top: 20px;
   }
 
   .dh {
@@ -429,6 +558,14 @@ main #bt {
 
   .m-text p {
     font-size: 3.8vw;
+  }
+}
+
+@media (max-width: 880px) {
+  .caption {
+    font-size: 3vw;
+    left: 20%;
+  width: 60%;
   }
 }
 </style>

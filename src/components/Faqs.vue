@@ -163,13 +163,14 @@ button {
   cursor: pointer;
   padding: 10px 15px;
   transition: 0.2s;
-  background-color: #6cff85;
+  background-color: #003134;
+  color: #0aabab;
   border-radius: 3px;
   border: 0;
 }
 
 button:hover {
-  background-color: #005434;
+  background-color: #001419;
 }
 
 .faq {
@@ -198,5 +199,11 @@ button:hover {
 .fblock:hover {
   color: #1dd755;
   border-bottom: 1px solid #1dd755;
+}
+
+@media (max-width:760px){
+  button {
+    top: 30px;
+  }
 }
 </style>

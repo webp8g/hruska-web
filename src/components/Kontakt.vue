@@ -131,7 +131,7 @@ export default {
         const response = await axios.post("/kontakt", this.formData);
 
         this.responseMessage = "Formulár bol úspešne odoslaný!";
-        
+
         this.formData = {
           name: "",
           priezvisko: "",
@@ -210,7 +210,7 @@ export default {
   background-color: #148569;
   border: none;
 }
-select:first-child() {
+select:first-child {
   color: black;
 }
 .contact-form input[type="submit"] {
@@ -305,7 +305,7 @@ select:first-child() {
   }
 
   .over-image {
-    left: 16vw;
+    left: 13vw;
   }
 
   .con-link {
@@ -319,7 +319,18 @@ select:first-child() {
 
 @media (max-width: 660px) {
   .over-image {
-    left: 10%;
+    left: 4vw;
+  }
+
+  .tel {
+    left: 16vw;
+  }
+}
+
+@media (max-width: 450px) {
+  .over-image {
+    top: 20px;
+    left: -6vw;
   }
 
   .tel {
