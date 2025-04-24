@@ -25,9 +25,13 @@ export default {
     return {
       docs: [
         {
-          name: "Všeobecné podmienky",
-          url: "/documents/vseobecne-podmienky.pdf",
+          name: "Verejný šifrovací kľúč",
+          url: "/documents/juposro.pem",
         },
+        {
+          name: "Zmena podniku poskytujúceho službu prístupu k internetu ",
+          url: "/documents/zmena-podniku-poskytujuceho-sluzbu-pristupu-k-internetu.pdf",
+        }
       ],
     };
   },
@@ -90,7 +94,7 @@ li {
   border-radius: 50px;
 }
 
-li a{
+li a {
   text-decoration: none;
   color: #003d37;
   transition: color 0.2s;
